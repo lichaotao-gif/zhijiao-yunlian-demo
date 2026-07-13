@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数字教材 — 职教云链</title>
+<link rel="stylesheet" href="assets/style.css?v=20260711h">
+</head>
+<body>
+
+<div class="rd-app">
+  <!-- ============ 侧边栏 ============ -->
+  <aside class="rd-side">
+    <a class="logo" href="index.html">
+      <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
+        <path d="M8 26c-3.3 0-6-2.7-6-6s2.7-6 6-6c.5-4.5 4.3-8 9-8 3.8 0 7 2.3 8.4 5.6" stroke="#00C29A" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M32 14c3.3 0 6 2.7 6 6s-2.7 6-6 6c-.5 4.5-4.3 8-9 8-3.8 0-7-2.3-8.4-5.6" stroke="#2160F3" stroke-width="3.4" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="3.2" fill="#0D1B3E"/>
+      </svg>
+      <span class="logo-text">
+        <span class="logo-cn">职教云链</span>
+        <span class="logo-en">Zhijiao Yunlian</span>
+      </span>
+    </a>
+
+    <nav class="rd-nav" aria-label="数字教材导航">
+      <button class="rd-nav-item active" data-view="mall">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 4.5v15Z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+        <span>教材商城</span>
+      </button>
+      <button class="rd-nav-item" data-view="my">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span>我的教材</span>
+      </button>
+      <button class="rd-nav-item" data-view="settings">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span>设置</span>
+      </button>
+    </nav>
+
+    <div class="rd-promo">
+      <div class="t">探索知识 无限可能</div>
+      <div class="d">开启你的数字阅读之旅</div>
+      <div class="links">
+        <a href="#" onclick="return false;">作者端</a>
+        <a href="#" onclick="return false;">出版社端</a>
+      </div>
+    </div>
+
+    <a class="rd-back-portal" href="index.html">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      返回门户首页
+    </a>
+  </aside>
+
+  <!-- ============ 主区 ============ -->
+  <div class="rd-main">
+    <header class="rd-topbar">
+      <h1 id="rdTitle">教材商城</h1>
+      <span class="hint" id="rdHint">发现、选购全部上架数字教材</span>
+      <span class="spacer"></span>
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="text" id="rdSearch" placeholder="搜索教材名称、作者…">
+      </div>
+      <button class="rd-redeem-btn" id="rdRedeem">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7"/><path d="M22 7h-5l-2-3H9L7 7H2"/><path d="M12 7v10"/><path d="M8.5 10.5 12 14l3.5-3.5"/></svg>
+        兑换教材
+      </button>
+      <div class="rd-user">
+        <span class="avatar">书</span>
+        <span class="name">书海漫游者</span>
+      </div>
+    </header>
+
+    <div class="rd-body">
+      <div class="rd-page active" id="rd-mall"></div>
+      <div class="rd-page" id="rd-my"></div>
+      <div class="rd-page" id="rd-settings"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 阅读器 -->
+<div class="reader-view" id="readerView"></div>
+
+<!-- 学习模式视图（视听/任务/图谱） -->
+<div class="mode-view" id="modeView"></div>
+
+<!-- 授课模式 -->
+<div class="teach-view" id="teachView"></div>
+
+<!-- 组群弹框 -->
+<div class="modal-mask" id="grpMask">
+  <div class="grp-modal" id="grpModal"></div>
+</div>
+
+<!-- 教材详情弹层 -->
+<div class="bd-overlay" id="bdOverlay">
+  <div class="bd-panel" id="bdPanel"></div>
+</div>
+
+<!-- 支付弹框 -->
+<div class="modal-mask" id="payMask">
+  <div class="pay-modal" id="payModal"></div>
+</div>
+
+<script src="assets/app.js?v=20260711h"></script>
+<script>
+/* ================= 数据 ================= */
+const BOOKS = [
+  {t:'法医损伤学（第2版）', a:'闵建雄', cv:'cv-6', sub:'刑事科学技术', level:'技工', cat:'专业基础课', price:29.90, tag:'配套视频', hot:1},
+  {t:'催眠破案实录', a:'侯森林 · 周用武', cv:'cv-8', sub:'侦查心理学', level:'技工', cat:'专业基础课', price:59.90, tag:'名师课堂', hot:1},
+  {t:'笔迹识人——笔迹分析与运用', a:'王圣江', cv:'cv-10', light:1, sub:'文件检验', level:'中职', cat:'专业基础课', price:60.00, hot:1},
+  {t:'文书物证司法鉴定理论与实务', a:'贾晓光', cv:'cv-3', sub:'司法鉴定', level:'高职专科', cat:'专业核心课', price:59.90},
+  {t:'野生动物识别与鉴定', a:'闵建雄', cv:'cv-7', sub:'动物检验', level:'高职专科', cat:'专业基础课', price:79.90, tag:'配套视频', hot:1},
+  {t:'指纹：历史、法则与传奇', a:'乔治·威尔顿', cv:'cv-4', sub:'痕迹检验', level:'本科', cat:'理论图书', price:68.00, tag:'本周新书', hot:1},
+  {t:'公安机关办理刑事案件程序规定释义与实务指南', a:'李本森 等', cv:'cv-12', sub:'执法规范', level:'高职专科', cat:'专业核心课', price:18.00},
+  {t:'刑事简易程序规范化改革实证研究', a:'孙茂利', cv:'cv-1', sub:'司法改革', level:'研究生', cat:'理论图书', price:49.90},
+  {t:'公安行政调解（第二版）', a:'付立忠', cv:'cv-9', sub:'行政执法', level:'中职', cat:'实训实习课', price:21.90},
+  {t:'公安机关刑事执法程序一本通', a:'贾晓光', cv:'cv-2', sub:'执法实务', level:'技工', cat:'实训实习课', price:23.50},
+  {t:'食药侦部门管辖的36种刑事案件立案追诉标准', a:'余定猛 · 丁正国', cv:'cv-11', sub:'案件办理', level:'高职本科', cat:'专业核心课', price:66.00},
+  {t:'从有效辩护到成功辩护', a:'何群 · 周林', cv:'cv-5', sub:'律师实务', level:'本科', cat:'升学辅导', price:81.90, tag:'配套视频', hot:1},
+  {t:'智能组织：数据与AI重塑的组织管理', a:'侯森林 · 周用武 · 徐照宇', cv:'cv-1', sub:'管理类', level:'本科', cat:'公共基础课', price:59.90, hot:1},
+  {t:'Excel数据管理与数据透视', a:'张晓莉 · 薛伟强', cv:'cv-2', sub:'数据分析', level:'中职', cat:'公共基础课', price:49.90, hot:1},
+  {t:'学会提问，驾驭AI：提示词从入门到精通', a:'贺敏华', cv:'cv-3', sub:'人工智能', level:'技工', cat:'公共基础课', price:45.00},
+  {t:'浪潮之巅（第四版 · 全二册）', a:'周用武 · 徐照宇', cv:'cv-9', sub:'科技史', level:'本科', cat:'理论图书', price:88.00},
+];
+const MY_BOOKS = [
+  {i:0, pr:62, last:'第四章 机械性损伤（二）'},
+  {i:4, pr:35, last:'第二章 兽类动物识别'},
+  {i:13, pr:88, last:'第六章 数据透视表进阶'},
+  {i:5, pr:12, last:'第一章 指纹学的起源'},
+];
+const LEVELS = ['全部','技工','中职','高职专科','高职本科','本科','研究生'];
+const CATS = ['全部','公共基础课','专业基础课','专业核心课','专业拓展课','实训实习课','升学辅导','理论图书'];
+let fLevel='全部', fCat='全部', curView='mall';
+
+/* ================= 工具 ================= */
+const esc = s => String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function coverHtml(b) {
+  return `<div class="cover ${b.cv}${b.light?' light':''}">
+    <div><div class="c-sub" style="font-size:8px;">${esc(b.sub)}</div><div class="c-title" style="font-size:13px;">${esc(b.t.length>12?b.t.slice(0,12)+'…':b.t)}</div></div>
+    <div class="c-foot" style="font-size:7px;">职教云链 · 数字出版</div>
+  </div>`;
+}
+
+/* 简介与目录（演示数据，后续由后台录入） */
+const DESCS = {
+  '法医损伤学（第2版）':'系统阐述法医损伤学的基础理论与鉴定实务，覆盖机械性损伤、致伤物推断与损伤程度评定，配套高清案例图谱、章节自测与授课课件。',
+  '催眠破案实录':'以真实案例解析催眠技术在侦查实务中的应用边界与操作规范，配套名师课堂视频与情景演练模块。',
+  '笔迹识人——笔迹分析与运用':'从笔迹形态特征入手，讲解笔迹分析的科学方法与司法运用场景，附大量真迹样本对照练习。',
+  '野生动物识别与鉴定':'图鉴式呈现常见野生动物物种识别要点与执法鉴定规范，含高清标本图库与识别测验。',
+  '指纹：历史、法则与传奇':'从指纹学的起源讲起，系统梳理指纹识别的科学法则与经典案例，配套高清图谱与交互式比对练习。',
+  'Excel数据管理与数据透视':'围绕数据清洗、函数进阶与数据透视表，以真实业务数据为练手场景，随书提供全部案例文件与操作微课。',
+};
+function descFor(b){ return DESCS[b.t] || `本教材围绕${b.sub}领域的核心知识与岗位技能编写，理论与实务并重，配套图文、音视频与互动素材，支持阅读与授课双模式，适用于${b.level}层次相关专业教学。`; }
+function tocFor(b){
+  return [
+    `第一章 绪论：走进${b.sub}`,
+    `第二章 ${b.sub}的基本概念与规范`,
+    `第三章 核心方法与操作流程`,
+    `第四章 典型场景与案例解析（上）`,
+    `第五章 典型场景与案例解析（下）`,
+    `第六章 综合实训与岗位衔接`,
+    `第七章 拓展阅读与前沿动态`,
+  ];
+}
+
+/* 购买状态：会话内持久化 */
+const purchased = new Set(JSON.parse(localStorage.getItem('zjyl_purchased') || '[]'));
+function isOwned(i){ return purchased.has(i) || MY_BOOKS.some(m => m.i === i); }
+function myList(){
+  const extra = [...purchased].filter(i => !MY_BOOKS.some(m => m.i === i)).map(i => ({i, pr:0, last:'尚未开始学习'}));
+  return [...extra, ...MY_BOOKS];
+}
+
+/* ================= 商城视图 ================= */
+function cardHtml(b, i) {
+  const owned = isOwned(i);
+  return `<article class="rd-card" onclick="openDetail(${i})">
+    ${coverHtml(b)}
+    <div class="n">${esc(b.t)}</div>
+    <div class="a">${esc(b.a)}</div>
+    <div class="f">
+      ${owned ? '<span style="font-size:12.5px;font-weight:700;color:var(--teal-deep);">已购买</span>' : `<span class="price"><span class="yen">¥</span>${b.price.toFixed(2)}</span>`}
+      <span class="go">立即阅读
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </div>
+  </article>`;
+}
+
+function pills(list, cur, setter) {
+  return list.map(v => `<span class="filter-opt ${v===cur?'active':''}" onclick="${setter}('${v}')">${esc(v)}</span>`).join('');
+}
+
+function renderMall() {
+  const q = (document.getElementById('rdSearch')?.value || '').trim();
+  let items = BOOKS.map((b, i) => ({b, i}));
+  if (fLevel!=='全部') items = items.filter(({b}) => b.level===fLevel);
+  if (fCat!=='全部') items = items.filter(({b}) => b.cat===fCat);
+  if (q) items = items.filter(({b}) => b.t.includes(q) || b.a.includes(q) || b.sub.includes(q));
+  document.getElementById('rd-mall').innerHTML = `
+    <div class="rd-filters">
+      <div class="filter-row">
+        <span class="filter-label">学历层次</span>
+        <div class="filter-opts">${pills(LEVELS, fLevel, 'setLevel')}</div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">图书分类</span>
+        <div class="filter-opts">${pills(CATS, fCat, 'setCat')}</div>
+      </div>
+    </div>
+    <div class="rd-sec-head">
+      <div class="t"><span class="bar"></span>教材资源</div>
+      <span style="font-size:13px;color:var(--ink-3);">共 <strong style="color:var(--blue);">${items.length}</strong> 本</span>
+    </div>
+    ${items.length
+      ? `<div class="rd-grid">${items.map(({b, i}) => cardHtml(b, i)).join('')}</div>`
+      : `<div style="text-align:center;padding:64px 0;color:var(--ink-3);">
+           <p style="font-size:16px;font-weight:700;color:var(--ink-2);">未找到匹配教材</p>
+           <p style="font-size:13px;margin-top:6px;">请尝试调整筛选条件或搜索关键词</p>
+         </div>`}`;
+}
+
+function renderMy() {
+  const list = myList();
+  const lr = getLastRead();
+  document.getElementById('rd-my').innerHTML = `
+    <div class="rd-sec-head">
+      <div class="t"><span class="bar"></span>我的教材</div>
+      <span style="font-size:13px;color:var(--ink-3);">共 ${list.length} 本 · 按最近学习排序</span>
+    </div>
+    <div class="rd-my-grid">
+      ${list.map(m => {
+        const b = BOOKS[m.i];
+        const st = lr[m.i];
+        const toc = tocFor(b);
+        const pr = st ? Math.round(((st.ch+1)/toc.length)*100) : m.pr;
+        const last = st ? toc[st.ch] : m.last;
+        return `<article class="rd-my-card" onclick="openDetail(${m.i})">
+          ${coverHtml(b)}
+          <div class="rd-my-body">
+            <div class="n">${esc(b.t)}</div>
+            <div class="a">${esc(b.a)}</div>
+            <div class="rd-progress">
+              <div class="row"><span>上次学到：${esc(last)}</span><strong>${pr}%</strong></div>
+              <div class="track"><div class="fill" style="width:${pr}%;"></div></div>
+            </div>
+            <div class="rd-my-actions">
+              <span class="btn-mini" onclick="event.stopPropagation();openReader(${m.i})">继续阅读
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+              <span class="btn-mini ghost" onclick="event.stopPropagation();openTeach(${m.i})">授课模式</span>
+            </div>
+          </div>
+        </article>`;
+      }).join('')}
+    </div>
+
+    <div class="rd-sec-head" style="margin-top:40px;">
+      <div class="t"><span class="bar"></span>我的组群</div>
+      <div class="grp-actions">
+        <button class="grp-btn grp-btn-ghost" onclick="openJoinGroup()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+          加入组群
+        </button>
+        <button class="grp-btn grp-btn-primary" onclick="openCreateGroup()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          创建组群
+        </button>
+      </div>
+    </div>
+    ${GROUPS.length ? `<div class="grp-grid">
+      ${GROUPS.map((g, gi) => `<article class="grp-card" onclick="openGroupDetail(${gi})">
+        <div class="g-head">
+          <span class="g-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <div>
+            <div class="g-name">${esc(g.name)}</div>
+            <span class="grp-role ${g.admin?'admin':'member'}">${g.admin?'管理员':'成员'}</span>
+          </div>
+        </div>
+        <div class="g-meta"><span><strong>${g.members}</strong> 位成员</span><span><strong>${g.books.length}</strong> 本教材</span></div>
+        <div class="g-code">邀请码 <code>${esc(g.code)}</code></div>
+      </article>`).join('')}
+    </div>`
+    : `<div class="grp-empty">还没有组群 · 创建组群后可用邀请码邀请同学加入，共享组群书架</div>`}`;
+}
+
+/* ================= 设置（参考 smart-reader） ================= */
+function getProfile(){ return Object.assign({nickname:'书海漫游者', phone:'13800138000', school:''}, JSON.parse(localStorage.getItem('zjyl_profile')||'{}')); }
+function saveProfile(patch){ localStorage.setItem('zjyl_profile', JSON.stringify(Object.assign(getProfile(), patch))); syncUserChip(); }
+function maskPhone(p){ return p ? p.replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2') : ''; }
+function syncUserChip(){
+  const u = getProfile();
+  document.querySelector('.rd-user .name').textContent = u.nickname;
+  document.querySelector('.rd-user .avatar').textContent = u.nickname.slice(0,1);
+}
+
+function renderSettings() {
+  const u = getProfile();
+  const schoolRow = u.school
+    ? `<div class="settings-school-row"><span class="val">${esc(u.school)} <span style="font-size:11.5px;color:var(--teal-deep);font-weight:700;margin-left:6px;">已绑定</span></span>
+       <span style="display:flex;gap:8px;">
+         <button class="btn-settings ghost" onclick="openSchoolModal()">更换学校</button>
+         <button class="btn-settings ghost" style="color:#E1543F;border-color:rgba(225,84,63,.35);" onclick="saveProfile({school:''});renderSettings();showToast('已解除学校绑定')">解除绑定</button>
+       </span></div>`
+    : `<div class="settings-school-row"><span class="muted">未绑定学校</span>
+       <button class="btn-settings primary" onclick="openSchoolModal()">绑定学校</button></div>`;
+  document.getElementById('rd-settings').innerHTML = `
+    <div class="settings-wrap">
+      <div class="settings-card">
+        <h2>个人信息</h2>
+        <div class="settings-profile">
+          <div class="settings-av-col">
+            <div class="settings-avatar">${esc(u.nickname.slice(0,1))}</div>
+            <span class="link" onclick="showToast('演示环境暂不支持上传头像')">更换头像</span>
+            <span class="hint">支持 JPG、PNG，小于 2MB</span>
+          </div>
+          <div class="settings-fields">
+            <label class="settings-label" for="setNick">昵称</label>
+            <input type="text" id="setNick" class="settings-input" maxlength="32" value="${esc(u.nickname)}" placeholder="请输入昵称"
+              onblur="const v=this.value.trim(); if(!v){this.value='${esc(u.nickname)}';showToast('昵称不能为空');return;} if(v!=='${esc(u.nickname)}'){saveProfile({nickname:v});renderSettings();showToast('昵称已保存');}">
+            <label class="settings-label" style="margin-top:18px;">学校 <span class="opt">（选填）</span></label>
+            ${schoolRow}
+          </div>
+        </div>
+      </div>
+      <div class="settings-card">
+        <h2>账户信息</h2>
+        <label class="settings-label">手机号</label>
+        <div class="settings-row">
+          <span class="val">${esc(maskPhone(u.phone))}</span>
+          <button class="btn-settings ghost" onclick="openPhoneModal()">修改</button>
+        </div>
+        <p class="settings-hint">用于登录与安全验证。换绑请点击「修改」，在弹窗中输入新号码与短信验证码。</p>
+      </div>
+      <div class="settings-card">
+        <h2>安全</h2>
+        <button class="settings-action-row" onclick="openPwdModal()">
+          <span>修改密码</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+      </div>
+      <div class="settings-card">
+        <h2>帮助与反馈</h2>
+        <button class="settings-action-row" onclick="showToast('反馈通道开发中，可先联系平台运营')">
+          <span>用户反馈</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+      </div>
+      <button class="btn-logout" onclick="showToast('已退出账号（演示）');setTimeout(()=>location.href='index.html', 800)">退出账号</button>
+    </div>`;
+}
+function openSchoolModal() {
+  openGrpModal(`
+    <button class="modal-close" onclick="closeGrpModal()" aria-label="关闭"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h3>完善学校信息</h3>
+    <p class="g-sub">仅支持已合作的学校；如没有激活码，请联系学校管理员获取</p>
+    <div class="field">
+      <label for="schCode">学校课程激活码</label>
+      <div class="input-wrap"><input type="text" id="schCode" placeholder="请输入学校课程激活码"></div>
+    </div>
+    <button class="btn-login" style="letter-spacing:2px;" onclick="const v=document.getElementById('schCode').value.trim(); if(!v){showToast('请输入激活码');return;} saveProfile({school:'广东省城市技师学院'}); renderSettings(); closeGrpModal(); showToast('学校绑定成功')">确定</button>`);
+}
+function openPhoneModal() {
+  openGrpModal(`
+    <button class="modal-close" onclick="closeGrpModal()" aria-label="关闭"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h3>修改手机号</h3>
+    <p class="g-sub">输入新手机号与短信验证码完成换绑（演示环境不校验真实性）</p>
+    <div class="field">
+      <label for="npPhone">新手机号</label>
+      <div class="input-wrap"><input type="tel" id="npPhone" maxlength="11" placeholder="11 位手机号"></div>
+    </div>
+    <div class="field">
+      <label for="npCode">短信验证码</label>
+      <div class="input-wrap" style="display:flex;gap:10px;">
+        <input type="text" id="npCode" maxlength="6" placeholder="6 位验证码" style="flex:1;">
+        <button type="button" class="btn-settings ghost" style="height:48px;border-radius:12px;flex:0 0 auto;" onclick="showToast('验证码已发送（演示：任意 6 位）')">获取验证码</button>
+      </div>
+    </div>
+    <button class="btn-login" style="letter-spacing:2px;" onclick="const v=document.getElementById('npPhone').value.trim(); if(!/^1\\d{10}$/.test(v)){showToast('请输入正确的 11 位手机号');return;} saveProfile({phone:v}); renderSettings(); closeGrpModal(); showToast('手机号已更新')">确认换绑</button>`);
+}
+function openPwdModal() {
+  openGrpModal(`
+    <button class="modal-close" onclick="closeGrpModal()" aria-label="关闭"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h3>修改密码</h3>
+    <p class="g-sub">请填写当前密码与新密码（演示环境不校验原密码真实性）</p>
+    <div class="field"><label>当前密码</label><div class="input-wrap"><input type="password" id="pwOld" placeholder="请输入当前密码"></div></div>
+    <div class="field"><label>新密码</label><div class="input-wrap"><input type="password" id="pwNew" placeholder="至少 6 位"></div></div>
+    <div class="field"><label>确认新密码</label><div class="input-wrap"><input type="password" id="pwNew2" placeholder="再次输入新密码"></div></div>
+    <button class="btn-login" style="letter-spacing:2px;" onclick="const a=document.getElementById('pwNew').value,b=document.getElementById('pwNew2').value; if(a.length<6){showToast('新密码至少 6 位');return;} if(a!==b){showToast('两次输入的新密码不一致');return;} closeGrpModal(); showToast('密码修改成功')">确认修改</button>`);
+}
+
+/* ================= 组群（参考 smart-reader 组群体系） ================= */
+const GROUPS = JSON.parse(localStorage.getItem('zjyl_groups') || 'null') || [
+  {name:'刑事科学技术 2401 班', code:'ZJYL-8F2K', admin:true, members:32, books:[0,4]},
+  {name:'法律事务学习组', code:'ZJYL-3H7Q', admin:false, members:12, books:[5]},
+];
+function saveGroups(){ localStorage.setItem('zjyl_groups', JSON.stringify(GROUPS)); }
+function genCode(){ const c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; let r=''; for(let i=0;i<4;i++) r+=c[Math.floor(Math.random()*c.length)]; return 'ZJYL-'+r; }
+const AV_COLORS = ['#2160F3','#00C29A','#F59E0B','#8B5CF6','#EF4466','#0EA5E9'];
+const AV_NAMES = ['林','陈','黄','张','李','周','吴','刘'];
+
+function openGrpModal(html){ document.getElementById('grpModal').innerHTML = html; document.getElementById('grpMask').classList.add('open'); }
+function closeGrpModal(){ document.getElementById('grpMask').classList.remove('open'); }
+
+function openCreateGroup() {
+  openGrpModal(`
+    <button class="modal-close" onclick="closeGrpModal()" aria-label="关闭"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h3>创建组群</h3>
+    <p class="g-sub">仅填写组群名称即可创建，创建后可用邀请码邀请成员加入</p>
+    <div class="field">
+      <label for="grpName">组群名称</label>
+      <div class="input-wrap"><input type="text" id="grpName" placeholder="例如：刑事科学技术 2402 班、司法鉴定实训小组" maxlength="32"></div>
+    </div>
+    <button class="btn-login" style="letter-spacing:2px;" onclick="doCreateGroup()">创建组群</button>`);
+  setTimeout(() => document.getElementById('grpName')?.focus(), 250);
+}
+function doCreateGroup() {
+  const name = document.getElementById('grpName').value.trim();
+  if (!name) { showToast('请填写组群名称'); return; }
+  GROUPS.unshift({name, code: genCode(), admin: true, members: 1, books: []});
+  saveGroups(); renderMy(); closeGrpModal();
+  showToast(`组群「${name}」创建成功，可用邀请码邀请成员`);
+}
+
+function openJoinGroup() {
+  openGrpModal(`
+    <button class="modal-close" onclick="closeGrpModal()" aria-label="关闭"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h3>加入组群</h3>
+    <p class="g-sub">向组群管理员索取<strong>邀请码</strong>，输入后即可加入并使用组群书架</p>
+    <div class="field">
+      <label for="grpCode">组群邀请码</label>
+      <div class="input-wrap"><input type="text" id="grpCode" placeholder="例如：ZJYL-8F2K" maxlength="12" style="text-transform:uppercase;font-family:ui-monospace,monospace;letter-spacing:2px;"></div>
+    </div>
+    <button class="btn-login" style="letter-spacing:2px;" onclick="doJoinGroup()">加入组群</button>`);
+  setTimeout(() => document.getElementById('grpCode')?.focus(), 250);
+}
+function doJoinGroup() {
+  const code = document.getElementById('grpCode').value.trim().toUpperCase();
+  if (!code) { showToast('请输入邀请码'); return; }
+  GROUPS.push({name:'数字教材共读组（' + code.slice(-4) + '）', code, admin:false, members: 8 + Math.floor(Math.random()*20), books:[1,13]});
+  saveGroups(); renderMy(); closeGrpModal();
+  showToast('加入成功，组群书架已同步');
+}
+
+function openGroupDetail(gi) {
+  const g = GROUPS[gi];
+  const avs = AV_NAMES.slice(0, Math.min(6, g.members)).map((n, i) =>
+    `<span class="av" style="background:${AV_COLORS[i%AV_COLORS.length]}">${n}</span>`).join('');
+  const shelf = g.books.map(bi => {
+    const b = BOOKS[bi];
+    return `<div class="grp-shelf-item" onclick="closeGrpModal();openDetail(${bi})" style="cursor:pointer;">
+      ${coverHtml(b)}
+      <div class="n2">${esc(b.t)}</div>
+    </div>`;
+  }).join('');
+  openGrpModal(`
+    <button class="modal-close" onclick="closeGrpModal()" aria-label="关闭"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h3>${esc(g.name)} <span class="grp-role ${g.admin?'admin':'member'}" style="vertical-align:3px;margin-left:6px;">${g.admin?'管理员':'成员'}</span></h3>
+    <p class="g-sub">${g.members} 位成员 · ${g.books.length} 本组群教材</p>
+    <div class="grp-code-row">组群邀请码 <code>${esc(g.code)}</code>
+      <button class="grp-btn grp-btn-ghost" style="height:32px;padding:0 14px;font-size:12px;" onclick="navigator.clipboard&&navigator.clipboard.writeText('${esc(g.code)}');showToast('邀请码已复制')">复制</button>
+    </div>
+    <div class="grp-members">${avs}<span class="more">等 ${g.members} 位成员</span></div>
+    <div style="font-size:13.5px;font-weight:700;margin-bottom:12px;">组群书架</div>
+    <div class="grp-shelf">
+      ${shelf}
+      ${g.admin ? `<div class="grp-shelf-add" onclick="openBookPicker(${gi})">
+        <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="margin:0 auto 6px;display:block;"><path d="M12 5v14M5 12h14"/></svg>添加教材</div>
+      </div>` : ''}
+    </div>
+    ${!g.books.length && !g.admin ? '<div class="grp-empty" style="margin-top:4px;">暂无教材 · 请联系组群管理员添加</div>' : ''}`);
+}
+
+function openBookPicker(gi) {
+  const g = GROUPS[gi];
+  const mine = myList().map(m => m.i).filter(i => !g.books.includes(i));
+  openGrpModal(`
+    <button class="modal-close" onclick="closeGrpModal()" aria-label="关闭"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h3>添加教材到「${esc(g.name)}」</h3>
+    <p class="g-sub">从我的教材中选择，添加后组群成员均可查看</p>
+    ${mine.length ? mine.map(i => `<div class="grp-pick-item" onclick="doAddBook(${gi},${i})">
+        ${coverHtml(BOOKS[i])}
+        <span class="t">${esc(BOOKS[i].t)}</span>
+        <span class="add-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></span>
+      </div>`).join('')
+    : '<div class="grp-empty">我的教材已全部在组群书架中</div>'}`);
+}
+function doAddBook(gi, bi) {
+  GROUPS[gi].books.push(bi);
+  saveGroups(); renderMy();
+  showToast(`已添加《${BOOKS[bi].t}》到组群书架`);
+  openGroupDetail(gi);
+}
+document.getElementById('grpMask').addEventListener('click', e => { if (e.target === e.currentTarget) closeGrpModal(); });
+
+/* ================= 阅读器 ================= */
+function getLastRead(){ return JSON.parse(localStorage.getItem('zjyl_lastread') || '{}'); }
+function setLastRead(i, ch){ const lr = getLastRead(); lr[i] = {ch}; localStorage.setItem('zjyl_lastread', JSON.stringify(lr)); }
+let rdBook = -1, rdCh = 0;
+
+function openReader(i, ch) {
+  rdBook = i;
+  const owned = isOwned(i);
+  const lr = getLastRead();
+  rdCh = (typeof ch === 'number') ? ch : (lr[i] ? lr[i].ch : 0);
+  if (!owned && rdCh > 1) rdCh = 0;
+  closeDetail();
+  renderReader();
+  document.getElementById('readerView').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeReader() {
+  document.getElementById('readerView').classList.remove('open');
+  document.body.style.overflow = '';
+  renderMy();
+}
+function gotoCh(n) {
+  const b = BOOKS[rdBook], toc = tocFor(b), owned = isOwned(rdBook);
+  if (n < 0 || n >= toc.length) return;
+  if (!owned && n > 1) { showToast('试读仅限前两章，购买后解锁全部内容'); return; }
+  rdCh = n;
+  if (owned) setLastRead(rdBook, n);
+  renderReader();
+  document.querySelector('.reader-content')?.scrollTo(0, 0);
+}
+function readerParas(b, ch) {
+  const t = tocFor(b)[ch];
+  return `
+    <p>${esc(descFor(b))}本章围绕「${esc(t.replace(/^第.章\s*/,''))}」展开，先梳理基本概念与术语体系，再结合${esc(b.sub)}领域的典型工作场景，讲解操作要点与常见误区，帮助学习者建立完整的知识框架。</p>
+    <p>在实际教学中，建议结合本章配套的案例素材与互动练习同步开展。数字教材支持随文批注、生词收藏与章节自测，学习记录将自动同步到「我的教材」学习进度中，便于课后复习与教师学情跟踪。</p>
+    <figure class="reader-figure">
+      <div class="ph">【示意图占位】${esc(t)} · 配图与音视频素材由后台上传</div>
+      <figcaption>图 ${ch+1}-1 ${esc(b.sub)}典型场景示意（演示占位图）</figcaption>
+    </figure>
+    <p>本节内容与岗位实务紧密衔接：从规范流程、质量控制到结果表述，均对应职业标准中的核心技能点。学习完成后，可通过章末自测检验掌握情况，系统将根据答题结果推荐需要强化的知识点。</p>
+    <div class="reader-callout">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8.2v-.2"/></svg>
+      <div><strong>学习提示</strong>：本章为${ch<2?'免费试读章节':'正式章节'}，配套的授课课件可在「授课模式」中直接投屏使用，支持课堂互动与随堂练习。</div>
+    </div>
+    <p>完成本章学习后，请继续学习下一章内容，逐步完成从基础认知到综合应用的进阶。祝学习顺利！</p>`;
+}
+/* 阅读偏好 / 笔记 */
+const rdPrefs = Object.assign({font:17, bg:'paper'}, JSON.parse(localStorage.getItem('zjyl_reader_prefs')||'{}'));
+function savePrefs(){ localStorage.setItem('zjyl_reader_prefs', JSON.stringify(rdPrefs)); }
+function getNotes(){ return JSON.parse(localStorage.getItem('zjyl_notes')||'{}'); }
+function rdApplyFont(v){
+  rdPrefs.font = Math.min(22, Math.max(14, parseInt(v,10)||17)); savePrefs();
+  const a = document.querySelector('.reader-article'); if (a) a.style.fontSize = rdPrefs.font + 'px';
+  const fv = document.getElementById('rdFontVal'); if (fv) fv.textContent = rdPrefs.font + 'px';
+}
+function rdSetBg(m){
+  rdPrefs.bg = m; savePrefs();
+  document.querySelector('.reader-content')?.setAttribute('data-bg', m);
+  document.querySelectorAll('.bg-swatch').forEach(el => el.classList.toggle('is-active', el.dataset.bg === m));
+}
+function rdToggleSlot(id){
+  const el = document.getElementById(id);
+  const was = el.classList.contains('is-open');
+  document.querySelectorAll('.rail-slot').forEach(x => x.classList.remove('is-open'));
+  if (!was) el.classList.add('is-open');
+  if (!was && id === 'railSearch') setTimeout(() => document.getElementById('rdTocSearch')?.focus(), 30);
+}
+function rdSearchToc(q){
+  q = q.trim().toLowerCase();
+  document.querySelectorAll('.reader-toc .rtoc-item').forEach(el => {
+    el.classList.toggle('dim', !!q && !el.textContent.toLowerCase().includes(q));
+  });
+}
+function rdToggleDrawer(id){
+  const el = document.getElementById(id);
+  const other = id === 'rdNotesDrawer' ? 'rdAiDrawer' : 'rdNotesDrawer';
+  document.getElementById(other)?.classList.remove('open');
+  el.classList.toggle('open');
+  document.querySelectorAll('.rail-slot').forEach(x => x.classList.remove('is-open'));
+}
+function rdNotesHtml(){
+  const notes = (getNotes()[rdBook] || []);
+  return notes.length
+    ? notes.slice().reverse().map(n => `<div class="note-item"><div class="nt">${new Date(n.t).toLocaleString()} · ${esc(n.ch)}</div>${esc(n.text)}</div>`).join('')
+    : '<div class="notes-empty">暂无笔记 · 在下方记录本节要点</div>';
+}
+function rdSaveNote(){
+  const ta = document.getElementById('rdNoteText');
+  const v = ta.value.trim();
+  if (!v) { showToast('请先输入笔记内容'); return; }
+  const all = getNotes();
+  (all[rdBook] = all[rdBook] || []).push({t: Date.now(), ch: tocFor(BOOKS[rdBook])[rdCh], text: v});
+  localStorage.setItem('zjyl_notes', JSON.stringify(all));
+  ta.value = '';
+  document.getElementById('rdNotesList').innerHTML = rdNotesHtml();
+  showToast('笔记已保存');
+}
+const AI_REPLIES = [
+  '这个知识点在本章「核心方法与操作流程」一节有详细展开，建议结合示意图理解操作顺序，再通过章末自测巩固。',
+  '可以这样记忆：先掌握概念定义，再对照典型案例理解适用条件，最后关注规范流程中的关键控制点。',
+  '相关内容与岗位职业标准直接对应，建议收藏本节并在「授课模式」中回看老师的讲解要点。',
+];
+let aiIdx = 0;
+function rdSendAi(){
+  const inp = document.getElementById('rdAiInput');
+  const v = inp.value.trim();
+  if (!v) return;
+  const box = document.getElementById('rdAiMsgs');
+  box.insertAdjacentHTML('beforeend', `<div class="ai-msg user">${esc(v)}</div>`);
+  inp.value = '';
+  box.scrollTop = box.scrollHeight;
+  setTimeout(() => {
+    box.insertAdjacentHTML('beforeend', `<div class="ai-msg bot">${AI_REPLIES[aiIdx++ % AI_REPLIES.length]}</div>`);
+    box.scrollTop = box.scrollHeight;
+  }, 600);
+}
+
+function renderReader() {
+  const b = BOOKS[rdBook], toc = tocFor(b), owned = isOwned(rdBook);
+  const tocHtml = toc.map((t, n) => {
+    const locked = !owned && n > 1;
+    return `<button class="rtoc-item ${n===rdCh?'active':''} ${locked?'locked':''}" onclick="gotoCh(${n})">
+      <span>${esc(t)}</span>
+      ${locked?'<span class="lk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>':''}
+    </button>`;
+  }).join('');
+  document.getElementById('readerView').innerHTML = `
+    <div class="reader-top">
+      <button class="reader-back" onclick="closeReader()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        返回
+      </button>
+      <span class="rt-title">${esc(b.t)}</span>
+      <span class="rt-ch">${esc(toc[rdCh])}</span>
+      <div class="rt-right">
+        ${owned ? `<span>进度 ${Math.round(((rdCh+1)/toc.length)*100)}%</span>` : '<span class="reader-trial-tag">试读模式 · 前两章免费</span>'}
+        ${owned ? '' : `<button class="grp-btn grp-btn-primary" style="height:32px;padding:0 16px;font-size:12.5px;" onclick="closeReader();openPay(${'${rdBook}'})">购买完整版</button>`}
+      </div>
+    </div>
+    <div class="reader-body">
+      <aside class="reader-toc">
+        <div class="rt-label">目录</div>
+        ${tocHtml}
+      </aside>
+      <div class="reader-content" data-bg="${rdPrefs.bg}">
+        <article class="reader-article" style="font-size:${rdPrefs.font}px;">
+          <h2>${esc(toc[rdCh])}</h2>
+          <div class="sub">${esc(b.t)} · ${esc(b.a)} 著 · 职教云链数字出版</div>
+          ${readerParas(b, rdCh)}
+        </article>
+        <div class="reader-pagenav">
+          <button class="btn-mini" onclick="gotoCh(${rdCh-1})" ${rdCh===0?'disabled style="opacity:.4;cursor:default;"':''}>← 上一章</button>
+          <button class="btn-mini" onclick="gotoCh(${rdCh+1})" ${rdCh===toc.length-1?'disabled style="opacity:.4;cursor:default;"':''}>下一章 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右侧工具栏 -->
+    <aside class="reader-rail" aria-label="阅读工具栏">
+      <div class="rail-slot" id="railMode">
+        <button class="rail-btn" onclick="rdToggleSlot('railMode')" title="其他学习模式">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.2"/><rect x="14" y="3" width="7" height="5" rx="1.2"/><rect x="14" y="10" width="7" height="11" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/></svg>
+          <span>模式</span>
+        </button>
+        <div class="rail-pop">
+          <div class="pt">其他学习模式</div>
+          ${bookModes(rdBook).filter(k => k !== 'read').concat(owned ? ['teach'] : []).map(k => {
+            const md = MODE_DEFS[k];
+            return `<div class="mode-card" style="margin-bottom:8px;" onclick="closeReader();openMode('${k}', ${rdBook})">
+              <div class="mode-icon ${md.cls}" style="width:34px;height:34px;border-radius:9px;">${md.icon}</div>
+              <div class="mode-info"><div class="mode-name" style="font-size:13px;">${md.name}</div></div>
+              <svg class="mode-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+      <div class="rail-slot" id="railDisplay">
+        <button class="rail-btn" onclick="rdToggleSlot('railDisplay')" title="显示设置（字号、背景）">
+          <span class="aa">Aa</span><span>显示</span>
+        </button>
+        <div class="rail-pop">
+          <section>
+            <div class="pt">字号</div>
+            <div class="font-row">
+              <input type="range" min="14" max="22" step="1" value="${rdPrefs.font}" oninput="rdApplyFont(this.value)">
+              <span class="fv" id="rdFontVal">${rdPrefs.font}px</span>
+            </div>
+          </section>
+          <section>
+            <div class="pt">阅读背景</div>
+            <div class="bg-swatches">
+              ${['paper','ivory','sepia','green','blue','dark'].map(m =>
+                `<button class="bg-swatch bgs-${m} ${rdPrefs.bg===m?'is-active':''}" data-bg="${m}" onclick="rdSetBg('${m}')" title="${m}"></button>`).join('')}
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="rail-slot" id="railSearch">
+        <button class="rail-btn" onclick="rdToggleSlot('railSearch')" title="搜索目录">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span>搜索</span>
+        </button>
+        <div class="rail-pop">
+          <div class="pt">搜索目录</div>
+          <input type="search" class="rail-search-input" id="rdTocSearch" placeholder="输入关键词过滤目录…" oninput="rdSearchToc(this.value)">
+        </div>
+      </div>
+      <button class="rail-btn" onclick="rdToggleDrawer('rdNotesDrawer')" title="笔记">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8"/></svg>
+        <span>笔记</span>
+      </button>
+      <button class="rail-btn" onclick="showToast('书签已添加（演示）')" title="书签">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        <span>书签</span>
+      </button>
+    </aside>
+
+    <!-- AI 阅读助手悬浮入口 -->
+    <button class="reader-ai-fab" onclick="rdToggleDrawer('rdAiDrawer')" title="AI 阅读助手" aria-label="AI 阅读助手">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.9L12 15.5l-1.9-4.6L5.5 9l4.6-1.4z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg>
+    </button>
+
+    <!-- 笔记抽屉 -->
+    <aside class="reader-drawer" id="rdNotesDrawer">
+      <div class="drawer-head">我的笔记
+        <button onclick="rdToggleDrawer('rdNotesDrawer')" aria-label="关闭"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <div class="drawer-body" id="rdNotesList">${rdNotesHtml()}</div>
+      <div class="drawer-foot">
+        <textarea id="rdNoteText" placeholder="记录本节要点…"></textarea>
+        <button class="save-btn" onclick="rdSaveNote()">保存笔记</button>
+      </div>
+    </aside>
+
+    <!-- AI 助手抽屉 -->
+    <aside class="reader-drawer" id="rdAiDrawer">
+      <div class="drawer-head">AI 阅读助手
+        <button onclick="rdToggleDrawer('rdAiDrawer')" aria-label="关闭"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <div class="drawer-body" id="rdAiMsgs">
+        <div class="ai-msg bot">你好！我是 AI 阅读助手，可以为你解释本章知识点、总结要点或推荐练习。试着问我一个问题吧。</div>
+      </div>
+      <div class="drawer-foot">
+        <div class="ai-input-row">
+          <input type="text" id="rdAiInput" placeholder="提问本章知识点、生词…" onkeydown="if(event.key==='Enter')rdSendAi()">
+          <button onclick="rdSendAi()">发送</button>
+        </div>
+      </div>
+    </aside>`;
+}
+
+/* ================= 学习模式（参考 smart-reader BOOK_READ_MODES） ================= */
+const MODE_DEFS = {
+  read: {name:'阅读模式', cls:'mi-read', desc:'沉浸式阅读体验，支持批注、书签、笔记和划线标注',
+    icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'},
+  teach: {name:'教学模式', cls:'mi-teach', desc:'课堂投屏演示，类 PPT 换页，讲练结合',
+    icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M3 10h18"/><path d="m7 20 2-4M17 20l-2-4"/></svg>'},
+  av: {name:'视听模式', cls:'mi-av', desc:'配套微课视频、课文朗读、名师讲解音频资源',
+    icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>'},
+  task: {name:'任务模式', cls:'mi-task', desc:'章节练习、课后作业、自测试卷，自动批改与错题收集',
+    icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>'},
+  kg: {name:'知识图谱', cls:'mi-kg', desc:'可视化知识结构，智能关联跨章节概念与考点脉络',
+    icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><path d="M12 8 5 16M12 8l7 8M5 19h14"/></svg>'},
+};
+/* 每本书可用模式（后台配置；默认 阅读+视听+任务） */
+function bookModes(i){
+  const b = BOOKS[i];
+  return b.modes || (b.hot ? ['read','av','task','kg'] : ['read','av','task']);
+}
+function openMode(key, i){
+  if (key === 'read') { openReader(i); return; }
+  if (key === 'teach') { openTeach(i); return; }
+  closeDetail();
+  renderModeView(key, i);
+  document.getElementById('modeView').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModeView(){
+  document.getElementById('modeView').classList.remove('open');
+  document.body.style.overflow = '';
+}
+let avEp = 0, mvKey = '', mvBook = -1;
+function mvSetEp(n){ avEp = n; renderModeView('av', mvBook); }
+function renderModeView(key, i){
+  mvKey = key; mvBook = i;
+  const b = BOOKS[i], toc = tocFor(b), m = MODE_DEFS[key];
+  let content = '';
+  if (key === 'av') {
+    const eps = toc.map((t, n) => ({t, dur: (8 + (n*7)%9) + ':' + String(15 + (n*13)%40).padStart(2,'0')}));
+    content = `<div class="av-layout">
+      <div>
+        <div class="av-player">
+          <button class="play-big" onclick="showToast('视频资源由后台上传，演示环境暂无片源')">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg>
+          </button>
+          <span class="av-cap">${esc(eps[avEp].t)} · 微课视频</span>
+          <span class="av-dur">${eps[avEp].dur}</span>
+        </div>
+        <div class="av-info">
+          <h3>${esc(eps[avEp].t)}</h3>
+          <p>本讲配套微课视频与课文朗读音频，由教材作者团队录制。支持倍速播放、字幕与进度记忆，观看记录计入学习进度。</p>
+        </div>
+      </div>
+      <div class="av-list">
+        <div class="avl-head">微课列表 · 共 ${eps.length} 讲</div>
+        ${eps.map((e, n) => `<div class="av-ep ${n===avEp?'active':''}" onclick="mvSetEp(${n})">
+          <span class="ep-ic">${n===avEp
+            ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg>'
+            : String(n+1).padStart(2,'0')}</span>
+          <span>${esc(e.t)}</span>
+          <span class="ep-dur">${e.dur}</span>
+        </div>`).join('')}
+      </div>
+    </div>`;
+  } else if (key === 'task') {
+    content = `<div class="task-grid">
+      ${toc.map((t, n) => {
+        const done = n < 2;
+        return `<div class="task-card">
+          <div class="tk-head"><span class="tk-no">${String(n+1).padStart(2,'0')}</span><span class="tk-title">${esc(t)} · 章节练习</span></div>
+          <div class="tk-meta"><span>${8 + (n*3)%7} 道题</span><span>预计 ${10 + (n*5)%15} 分钟</span><span>自动批改</span></div>
+          <div class="tk-foot">
+            <span class="tk-status ${done?'done':'todo'}">${done ? '已完成 · 正确率 ' + (85 + n*5) + '%' : '未开始'}</span>
+            <button class="btn-mini" onclick="showToast('在线答题功能开发中，敬请期待')">${done?'查看报告':'进入答题'}
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>`;
+      }).join('')}
+    </div>`;
+  } else if (key === 'kg') {
+    const cx = 480, cy = 300;
+    const nodes = toc.map((t, n) => {
+      const ang = (Math.PI * 2 / toc.length) * n - Math.PI / 2;
+      return {x: cx + Math.cos(ang) * 205, y: cy + Math.sin(ang) * 165, t: t.replace(/^第.章\s*/, '').slice(0, 9), ang};
+    });
+    const subs = nodes.flatMap((nd, n) => [0, 1].map(k => {
+      const a = nd.ang + (k ? .34 : -.34);
+      return {x: cx + Math.cos(a) * 300, y: cy + Math.sin(a) * 240, t: ['概念', '规范', '案例', '实训', '考点', '方法'][(n + k * 3) % 6], px: nd.x, py: nd.y};
+    }));
+    content = `<div class="kg-canvas">
+      <svg viewBox="0 0 960 600">
+        ${nodes.map(nd => `<line x1="${cx}" y1="${cy}" x2="${nd.x}" y2="${nd.y}" stroke="#C7D2FE" stroke-width="1.5"/>`).join('')}
+        ${subs.map(sd => `<line x1="${sd.px}" y1="${sd.py}" x2="${sd.x}" y2="${sd.y}" stroke="#E4E9F4" stroke-width="1.2" stroke-dasharray="3 4"/>`).join('')}
+        ${subs.map(sd => `<g><circle cx="${sd.x}" cy="${sd.y}" r="17" fill="#F5F7FC" stroke="#E4E9F4"/><text x="${sd.x}" y="${sd.y+4}" text-anchor="middle" font-size="10" fill="#7A86A5">${sd.t}</text></g>`).join('')}
+        ${nodes.map(nd => `<g style="cursor:pointer" onclick="showToast('知识点详情开发中')"><circle cx="${nd.x}" cy="${nd.y}" r="34" fill="#EAF0FE" stroke="#2160F3" stroke-width="1.5"/><text x="${nd.x}" y="${nd.y}" text-anchor="middle" font-size="11" font-weight="700" fill="#1141C4"><tspan x="${nd.x}" dy="-2">${esc(nd.t.slice(0,5))}</tspan><tspan x="${nd.x}" dy="13">${esc(nd.t.slice(5))}</tspan></text></g>`).join('')}
+        <circle cx="${cx}" cy="${cy}" r="52" fill="url(#kgGrad)"/>
+        <defs><linearGradient id="kgGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2160F3"/><stop offset="1" stop-color="#00C29A"/></linearGradient></defs>
+        <text x="${cx}" y="${cy-4}" text-anchor="middle" font-size="14" font-weight="900" fill="#fff">${esc(b.t.slice(0,6))}</text>
+        <text x="${cx}" y="${cy+14}" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.8)">${toc.length} 章 · ${toc.length*2} 个知识点</text>
+      </svg>
+      <div class="kg-legend">
+        <span><i style="background:linear-gradient(135deg,#2160F3,#00C29A)"></i>教材</span>
+        <span><i style="background:#EAF0FE;border:1.5px solid #2160F3"></i>章节</span>
+        <span><i style="background:#F5F7FC;border:1px solid #E4E9F4"></i>知识点</span>
+      </div>
+    </div>`;
+  }
+  document.getElementById('modeView').innerHTML = `
+    <div class="reader-top">
+      <button class="reader-back" onclick="closeModeView()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        返回
+      </button>
+      <span class="rt-title">${esc(b.t)}</span>
+      <span class="rt-ch">${m.name}</span>
+      <div class="rt-right">
+        ${bookModes(i).filter(k => k !== key).map(k =>
+          `<button class="grp-btn grp-btn-ghost" style="height:32px;padding:0 14px;font-size:12.5px;" onclick="closeModeView();openMode('${k}',${i})">${MODE_DEFS[k].name}</button>`).join('')}
+      </div>
+    </div>
+    <div class="mv-body"><div class="mv-wrap">${content}</div></div>`;
+}
+
+/* ================= 授课模式 ================= */
+let tcBook = -1, tcSlide = 0;
+function teachSlides(b) {
+  const toc = tocFor(b);
+  return [
+    {t: b.t, pts: ['主讲：' + b.a, '适用层次：' + b.level + ' · ' + b.cat, '本课程配套数字教材，支持课堂互动与随堂练习']},
+    ...toc.map(ch => ({t: ch, pts: [
+      '核心概念与术语体系梳理',
+      b.sub + '领域的典型工作场景解析',
+      '操作要点、规范流程与常见误区',
+      '章末自测与岗位技能点对照',
+    ]})),
+  ];
+}
+function openTeach(i) {
+  tcBook = i; tcSlide = 0;
+  closeDetail();
+  renderTeach();
+  document.getElementById('teachView').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeTeach() {
+  document.getElementById('teachView').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function teachGo(n) {
+  const slides = teachSlides(BOOKS[tcBook]);
+  if (n < 0 || n >= slides.length) return;
+  tcSlide = n; renderTeach();
+}
+function renderTeach() {
+  const b = BOOKS[tcBook];
+  const slides = teachSlides(b);
+  const s0 = slides[tcSlide];
+  document.getElementById('teachView').innerHTML = `
+    <div class="teach-top">
+      <span class="t-name">${esc(b.t)}</span>
+      <span class="t-mode">授课模式</span>
+      <button class="teach-exit" onclick="closeTeach()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        退出授课
+      </button>
+    </div>
+    <div class="teach-stage">
+      <div class="teach-slide">
+        <div class="kicker"><span class="ln"></span>${tcSlide===0 ? '课程封面' : '第 ' + tcSlide + ' 讲'}</div>
+        <h2>${esc(s0.t)}</h2>
+        <ul>${s0.pts.map(pt => `<li><span class="dot"></span><span>${esc(pt)}</span></li>`).join('')}</ul>
+      </div>
+    </div>
+    <div class="teach-foot">
+      <button class="teach-nav" onclick="teachGo(${tcSlide-1})" ${tcSlide===0?'disabled':''}>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg>
+      </button>
+      <span class="teach-page">${tcSlide+1} / ${slides.length}</span>
+      <button class="teach-nav" onclick="teachGo(${tcSlide+1})" ${tcSlide===slides.length-1?'disabled':''}>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+      </button>
+    </div>`;
+}
+document.addEventListener('keydown', e => {
+  if (document.getElementById('teachView').classList.contains('open')) {
+    if (e.key === 'ArrowRight') teachGo(tcSlide+1);
+    if (e.key === 'ArrowLeft') teachGo(tcSlide-1);
+    if (e.key === 'Escape') closeTeach();
+  }
+});
+
+/* ================= 教材详情弹层 ================= */
+let bdIdx = -1, bdTab = 'intro';
+function openDetail(i) {
+  bdIdx = i; bdTab = 'intro';
+  renderDetail();
+  document.getElementById('bdOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeDetail() {
+  document.getElementById('bdOverlay').classList.remove('open');
+  if (!document.getElementById('readerView').classList.contains('open') &&
+      !document.getElementById('teachView').classList.contains('open')) {
+    document.body.style.overflow = '';
+  }
+}
+function switchBdTab(t) { bdTab = t; renderDetail(); }
+function renderDetail() {
+  const b = BOOKS[bdIdx];
+  if (!b) return;
+  const owned = isOwned(bdIdx);
+  const heroCv = b.light ? 'cv-9' : b.cv;
+  const toc = tocFor(b);
+  const tocHtml = toc.map((ch, n) => {
+    const free = n < 2;
+    const unlocked = owned || free;
+    return `<div class="bd-toc-item ${unlocked?'unlocked':''}" onclick="${unlocked ? `openReader(${bdIdx},${n})` : `showToast('购买后可解锁全部章节')`}">
+      <span class="no">${String(n+1).padStart(2,'0')}</span>
+      <span>${esc(ch)}</span>
+      ${owned ? '' : free
+        ? '<span class="free-tag">免费试读</span>'
+        : '<span class="lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>'}
+    </div>`;
+  }).join('');
+  const actions = owned
+    ? `<span class="owned-badge">
+         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+         已购买 · 可离线阅读
+       </span>
+       <button class="bd-btn bd-btn-read" onclick="openReader(${bdIdx})">立即阅读
+         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+       </button>
+       <button class="bd-btn bd-btn-teach" onclick="openTeach(${bdIdx})">授课模式</button>`
+    : `<span class="price"><span class="yen">¥</span>${b.price.toFixed(2)}</span>
+       <button class="bd-btn bd-btn-try" onclick="openReader(${bdIdx},0)">免费试读</button>
+       <button class="bd-btn bd-btn-buy" onclick="openPay(${bdIdx})">立即购买
+         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+       </button>`;
+  document.getElementById('bdPanel').innerHTML = `
+    <button class="bd-close" onclick="closeDetail()" aria-label="关闭">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="bd-hero ${heroCv}">
+      ${coverHtml(b)}
+      <div class="bd-hero-body">
+        <h2>${esc(b.t)}</h2>
+        <div class="a">${esc(b.a)} 著</div>
+        <div class="meta">
+          <span>${esc(b.level)}</span><span>${esc(b.cat)}</span><span>${esc(b.sub)}</span>${b.tag?`<span>${esc(b.tag)}</span>`:''}
+        </div>
+      </div>
+    </div>
+    <div class="bd-actions">${actions}</div>
+    <div class="bd-tabs">
+      <button class="bd-tab ${bdTab==='intro'?'active':''}" onclick="switchBdTab('intro')">简介</button>
+      <button class="bd-tab ${bdTab==='toc'?'active':''}" onclick="switchBdTab('toc')">目录</button>
+    </div>
+    <div class="bd-content">
+      ${bdTab==='intro'
+        ? `<div class="bd-desc">
+             <p>${esc(descFor(b))}</p>
+             <div class="facts">
+               <div><span class="k">书号</span><span>ISBN 978-7-81139-841-0</span></div>
+               <div><span class="k">出版方</span><span>职教云链 · 数字出版</span></div>
+               <div><span class="k">适用层次</span><span>${esc(b.level)}</span></div>
+               <div><span class="k">内容形态</span><span>图文 · 音视频 · 互动练习</span></div>
+               <div><span class="k">阅读模式</span><span>自主阅读 / 课堂授课双模式</span></div>
+             </div>
+             <div class="mode-sec-title"><span class="bar"></span>学习模式</div>
+             <div class="mode-grid">
+               ${bookModes(bdIdx).concat(owned ? ['teach'] : []).map(k => {
+                 const md = MODE_DEFS[k];
+                 return `<div class="mode-card" onclick="openMode('${k}', ${bdIdx})">
+                   <div class="mode-icon ${md.cls}">${md.icon}</div>
+                   <div class="mode-info"><div class="mode-name">${md.name}</div><div class="mode-desc">${md.desc}</div></div>
+                   <svg class="mode-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+                 </div>`;
+               }).join('')}
+             </div>
+           </div>`
+        : `<div class="bd-toc">${tocHtml}</div>`}
+    </div>`;
+}
+document.getElementById('bdOverlay').addEventListener('click', e => { if (e.target === e.currentTarget) closeDetail(); });
+
+/* ================= 支付 ================= */
+let payIdx = -1, payMethod = 'wx';
+function openPay(i) {
+  payIdx = i; payMethod = 'wx';
+  renderPay();
+  document.getElementById('payMask').classList.add('open');
+}
+function closePay() { document.getElementById('payMask').classList.remove('open'); }
+function setPayMethod(m) { payMethod = m; renderPay(); }
+function renderPay() {
+  const b = BOOKS[payIdx];
+  const mk = (key, cls, label, icon) => `
+    <div class="pay-method ${payMethod===key?'active':''}" onclick="setPayMethod('${key}')">
+      <span class="pm-ic ${cls}">${icon}</span>${label}
+      <span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>
+    </div>`;
+  document.getElementById('payModal').innerHTML = `
+    <button class="modal-close" onclick="closePay()" aria-label="关闭">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <h3>确认订单</h3>
+    <div class="pay-order">
+      ${coverHtml(b)}
+      <div class="info">
+        <div class="t">${esc(b.t)}</div>
+        <div class="a">${esc(b.a)} · 数字教材</div>
+        <div class="price"><span class="yen">¥</span>${b.price.toFixed(2)}</div>
+      </div>
+    </div>
+    <div class="pay-methods">
+      ${mk('wx','pm-wx','微信支付','<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8.7 4C5 4 2 6.6 2 9.8c0 1.8 1 3.4 2.5 4.5l-.6 1.9 2.2-1.1c.8.2 1.5.4 2.4.4h.4a5 5 0 0 1-.2-1.5c0-3 2.9-5.5 6.5-5.5h.4C14.9 6 12.1 4 8.7 4zm-2.2 3a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zm4.7 0a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zM15.3 10c-3.1 0-5.6 2.1-5.6 4.7 0 2.6 2.5 4.7 5.6 4.7.6 0 1.3-.1 1.9-.3l1.9.9-.5-1.6c1.4-.9 2.4-2.2 2.4-3.7 0-2.6-2.5-4.7-5.7-4.7zm-2 2.6a.8.8 0 1 1 0 1.5.8.8 0 0 1 0-1.5zm4 0a.8.8 0 1 1 0 1.5.8.8 0 0 1 0-1.5z"/></svg>')}
+      ${mk('ali','pm-ali','支付宝','<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 15.1c-1.7-.6-3.9-1.4-6.3-2.1.8-1.4 1.4-3 1.8-4.6h-4.3V6.9h5.3V6h-5.3V3.6h-2.4V6H5v.9h5.2v1.5H5.9v.9h8.6a13 13 0 0 1-1.3 3.2c-2.2-.7-4.5-1.2-6.2-1.2-3.5 0-4.5 1.9-4.5 3.5 0 2 1.7 3.6 4.4 3.6 2.6 0 4.9-1.3 6.8-3.4 2.3.9 4.6 2 6.7 2.9l1-2.4zM6.6 17c-1.4 0-2.4-.7-2.4-1.8 0-1 .8-1.9 2.6-1.9 1.4 0 3.1.5 4.9 1.2-1.5 1.6-3.3 2.5-5.1 2.5z"/></svg>')}
+      ${mk('corp','pm-corp','对公转账（院校采购）','<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6"/><path d="M4 9v11h16V9"/><path d="M8 20v-7h8v7"/></svg>')}
+    </div>
+    <button class="pay-submit" id="paySubmit" onclick="doPay()">确认支付 ¥${b.price.toFixed(2)}</button>
+    <p class="pay-hint">演示环境：不产生真实扣款 · 正式环境接入平台统一支付并留档对账</p>`;
+}
+function doPay() {
+  const btn = document.getElementById('paySubmit');
+  btn.disabled = true;
+  btn.textContent = '支付处理中…';
+  setTimeout(() => {
+    purchased.add(payIdx);
+    localStorage.setItem('zjyl_purchased', JSON.stringify([...purchased]));
+    const b = BOOKS[payIdx];
+    document.getElementById('payModal').innerHTML = `
+      <div class="pay-success">
+        <div class="ic">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>
+        </div>
+        <div class="t1">支付成功</div>
+        <div class="t2">《${esc(b.t)}》已加入「我的教材」，可立即开始学习</div>
+        <div class="btn-row">
+          <button class="bd-btn bd-btn-teach" onclick="closePay()">继续逛逛</button>
+          <button class="bd-btn bd-btn-read" onclick="closePay();closeDetail();go('my')">去我的教材</button>
+        </div>
+      </div>`;
+    renderMall(); renderMy(); renderDetail();
+  }, 1100);
+}
+document.getElementById('payMask').addEventListener('click', e => { if (e.target === e.currentTarget) closePay(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !document.getElementById('teachView').classList.contains('open')) { closePay(); closeDetail(); closeGrpModal(); }
+});
+
+/* ================= 切换 ================= */
+const VIEW_META = {
+  mall: ['教材商城', '发现、选购全部上架数字教材'],
+  my:   ['我的教材', '已购教材、学习进度与组群'],
+  settings: ['设置', '账号与偏好'],
+};
+function go(view) {
+  curView = view;
+  document.querySelectorAll('.rd-nav-item').forEach(n => n.classList.toggle('active', n.dataset.view === view));
+  document.querySelectorAll('.rd-page').forEach(p => p.classList.toggle('active', p.id === 'rd-' + view));
+  document.getElementById('rdTitle').textContent = VIEW_META[view][0];
+  document.getElementById('rdHint').textContent = VIEW_META[view][1];
+  window.scrollTo(0, 0);
+}
+function setLevel(v){ fLevel=v; renderMall(); }
+function setCat(v){ fCat=v; renderMall(); }
+
+document.querySelectorAll('.rd-nav-item').forEach(n => n.addEventListener('click', () => go(n.dataset.view)));
+document.getElementById('rdSearch').addEventListener('input', () => { if (curView!=='mall') go('mall'); renderMall(); });
+document.getElementById('rdRedeem').addEventListener('click', () => showToast('兑换码功能开发中，敬请期待'));
+
+renderMall(); renderMy(); renderSettings(); syncUserChip();
+go('mall');
+if (location.hash === '#my') go('my');
+</script>
+</body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>职教云链 — 面向职教 · 服务职教 · 引领职教</title>
+<link rel="stylesheet" href="assets/style.css?v=20260711h">
+</head>
+<body>
+
+<!-- ================= Header ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <path d="M8 26c-3.3 0-6-2.7-6-6s2.7-6 6-6c.5-4.5 4.3-8 9-8 3.8 0 7 2.3 8.4 5.6" stroke="#00C29A" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M32 14c3.3 0 6 2.7 6 6s-2.7 6-6 6c-.5 4.5-4.3 8-9 8-3.8 0-7-2.3-8.4-5.6" stroke="#2160F3" stroke-width="3.4" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="3.2" fill="#0D1B3E"/>
+      </svg>
+      <span class="logo-text">
+        <span class="logo-cn">职教云链</span>
+        <span class="logo-en">Zhijiao Yunlian</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">首页</a>
+      <a href="reader.html">数字教材</a>
+      <a href="#">终身教育</a>
+      <a href="#">名师课堂</a>
+      <a href="#">我要写书<span class="nav-badge">NEW</span></a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="text" placeholder="搜索教材、课程、作者…">
+      </div>
+      <a class="btn btn-primary" href="login.html">注册 / 登录</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= Hero ================= -->
+<section class="hero">
+  <!-- banner 背景组：上线后由后台配置增删/切换 -->
+  <div class="hero-bg hb-1 active"></div>
+  <div class="hero-bg hb-2"></div>
+  <div class="hero-bg hb-3"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-switch">
+    <span class="carousel-dot active"></span>
+    <span class="carousel-dot"></span>
+    <span class="carousel-dot"></span>
+  </div>
+  <div class="container hero-inner">
+    <div>
+      <span class="hero-kicker"><span class="dot"></span>新一代职业教育数字教材平台</span>
+      <h1>面向职教 · 服务职教<br><em>引领职教</em>数字化未来</h1>
+      <p class="hero-sub">汇聚优质数字教材与名师课程，覆盖图文、音视频与互动素材，为院校、出版社与作者提供一站式数字化教学服务。</p>
+      <div class="hero-cta">
+        <a class="btn btn-hero" href="reader.html">
+          浏览数字教材
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-hero-ghost" href="#">我要写书</a>
+      </div>
+    </div>
+    <div class="hero-illust" aria-hidden="true">
+      <svg viewBox="0 0 540 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pageL" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#DCE8FF"/><stop offset="1" stop-color="#F6FAFF"/>
+          </linearGradient>
+          <linearGradient id="pageR" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#F6FAFF"/><stop offset="1" stop-color="#CFE0FF"/>
+          </linearGradient>
+          <linearGradient id="tealBlue" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#00C29A"/><stop offset="1" stop-color="#2160F3"/>
+          </linearGradient>
+          <linearGradient id="screenG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="rgba(255,255,255,.22)"/><stop offset="1" stop-color="rgba(255,255,255,.08)"/>
+          </linearGradient>
+          <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="rgba(0,194,154,.45)"/><stop offset="1" stop-color="rgba(0,194,154,0)"/>
+          </radialGradient>
+        </defs>
+
+        <!-- 底部光晕 -->
+        <ellipse cx="270" cy="400" rx="230" ry="42" fill="url(#glow)"/>
+
+        <!-- 轨道虚线 -->
+        <ellipse cx="270" cy="250" rx="225" ry="130" stroke="rgba(255,255,255,.18)" stroke-width="1.5" stroke-dasharray="3 8"/>
+        <circle cx="60" cy="300" r="5" fill="#6FF7D4"/>
+        <circle cx="480" cy="190" r="4" fill="#6C9BFF"/>
+
+        <!-- 翻开的书 -->
+        <g>
+          <path d="M270 344 Q175 300 82 322 L82 384 Q175 362 270 406 Q365 362 458 384 L458 322 Q365 300 270 344 Z" fill="#0A1A44" opacity=".55"/>
+          <path d="M270 336 Q175 292 82 314 L82 376 Q175 354 270 398 Z" fill="url(#pageL)"/>
+          <path d="M270 336 Q365 292 458 314 L458 376 Q365 354 270 398 Z" fill="url(#pageR)"/>
+          <path d="M270 336 L270 398" stroke="#9DB4E6" stroke-width="2"/>
+          <path d="M118 330 Q185 316 246 342 M118 346 Q185 332 246 358" stroke="#AFC4EC" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M422 330 Q355 316 294 342 M422 346 Q355 332 294 358" stroke="#AFC4EC" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+
+        <!-- 书页升起的数据流 -->
+        <path d="M270 330 C270 280 250 260 210 235 M270 330 C270 270 300 255 350 225 M270 330 L270 205" stroke="rgba(111,247,212,.5)" stroke-width="1.5" stroke-dasharray="2 7" stroke-linecap="round"/>
+
+        <!-- 中间：云链 -->
+        <g class="fl-a">
+          <path d="M212 158c-15 0-27-12-27-27s12-27 27-27c3-20 20-35 41-35 17 0 31 10 38 25" stroke="#00C29A" stroke-width="10" stroke-linecap="round"/>
+          <path d="M318 96c15 0 27 12 27 27s-12 27-27 27c-3 20-20 35-41 35-17 0-31-10-38-25" stroke="#5B8DF7" stroke-width="10" stroke-linecap="round"/>
+          <circle cx="265" cy="127" r="12" fill="#fff"/>
+          <circle cx="265" cy="127" r="5" fill="#00C29A"/>
+        </g>
+
+        <!-- 左卡片：名师课堂 -->
+        <g class="fl-b">
+          <rect x="52" y="150" width="132" height="96" rx="16" fill="url(#screenG)" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+          <circle cx="118" cy="188" r="22" fill="url(#tealBlue)"/>
+          <path d="M112 178l18 10-18 10z" fill="#fff"/>
+          <rect x="76" y="222" width="84" height="7" rx="3.5" fill="rgba(255,255,255,.35)"/>
+        </g>
+
+        <!-- 右卡片：数字教材 -->
+        <g class="fl-c">
+          <rect x="360" y="118" width="128" height="118" rx="16" fill="url(#screenG)" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+          <rect x="378" y="136" width="52" height="40" rx="8" fill="rgba(111,247,212,.5)"/>
+          <rect x="378" y="188" width="92" height="7" rx="3.5" fill="rgba(255,255,255,.4)"/>
+          <rect x="378" y="204" width="70" height="7" rx="3.5" fill="rgba(255,255,255,.25)"/>
+          <circle cx="452" cy="150" r="13" fill="#00C29A"/>
+          <path d="M446 150l4.5 4.5 8-9" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+
+        <!-- 星点 -->
+        <path d="M140 92l3.5 9 9 3.5-9 3.5-3.5 9-3.5-9-9-3.5 9-3.5z" fill="#6FF7D4" opacity=".9"/>
+        <path d="M420 62l2.8 7.2 7.2 2.8-7.2 2.8-2.8 7.2-2.8-7.2-7.2-2.8 7.2-2.8z" fill="#6C9BFF" opacity=".85"/>
+        <circle cx="330" cy="52" r="4" fill="rgba(255,255,255,.5)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<main>
+<!-- ================= 业务板块入口 ================= -->
+<section class="block">
+  <div class="container">
+    <div class="cats reveal">
+      <a class="cat-card" href="reader.html">
+        <span class="cat-icon ci-0">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 4.5v15Z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/><path d="M9 7h6M9 11h4"/></svg>
+        </span>
+        <span class="cat-body"><span class="name">数字教材</span><br><span class="desc">图文声像 · 阅读授课双模式</span></span>
+        <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="cat-card" href="#">
+        <span class="cat-icon ci-2">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9 20v-6h6v6"/></svg>
+        </span>
+        <span class="cat-body"><span class="name">终身教育</span><br><span class="desc">家庭教育 · 全民阅读书城</span></span>
+        <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="cat-card" href="#">
+        <span class="cat-icon ci-1">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 9 15"/><path d="M20 14v5a1.8 1.8 0 0 1-1.8 1.8H5A1.8 1.8 0 0 1 3.2 19V6.8A1.8 1.8 0 0 1 5 5h5"/></svg>
+        </span>
+        <span class="cat-body"><span class="name">职业教育</span><br><span class="desc">中职 · 高职专科 · 本科</span></span>
+        <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="cat-card" href="#">
+        <span class="cat-icon ci-3">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg>
+        </span>
+        <span class="cat-body"><span class="name">技工教育</span><br><span class="desc">实训实习 · 技能认证</span></span>
+        <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="cat-card" href="#">
+        <span class="cat-icon ci-5">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg>
+        </span>
+        <span class="cat-body"><span class="name">国际教育</span><br><span class="desc">中外合作 · 双语教材</span></span>
+        <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="cat-card" href="#">
+        <span class="cat-icon ci-6">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4.5"/><path d="M4 21c.8-4 4-6.5 8-6.5s7.2 2.5 8 6.5"/></svg>
+        </span>
+        <span class="cat-body"><span class="name">继续教育</span><br><span class="desc">学历提升 · 职后培训</span></span>
+        <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="cat-card" href="#">
+        <span class="cat-icon ci-7">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5-2.5-8-5.5-8-10a8 8 0 0 1 16 0c0 4.5-3.5 7.5-8 10Z"/><circle cx="12" cy="10.5" r="2.6"/></svg>
+        </span>
+        <span class="cat-body"><span class="name">行业教育</span><br><span class="desc">产教融合 · 行业标准</span></span>
+        <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="cat-card" href="#">
+        <span class="cat-icon ci-4">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0-2.5-2.5H2V4Z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2.5 2.5 0 0 1 2.5-2.5H22V4Z"/></svg>
+        </span>
+        <span class="cat-body"><span class="name">通识教育</span><br><span class="desc">公共基础 · 素养提升</span></span>
+        <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 最新教材 + 名师课堂 ================= -->
+<section class="block">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <h2>最新教材</h2>
+        <span class="en">New Arrivals</span>
+      </div>
+      <a class="sec-more" href="reader.html#mall">查看全部
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="carousel-zone reveal">
+      <!-- 轮播（后台可自定义） -->
+      <div class="carousel">
+        <div class="slide sl-1 active">
+          <div class="s-cover">
+            <div class="cover cv-4">
+              <div><div class="c-sub">数字教材 · 专业基础课</div><div class="c-title">指纹：历史、<br>法则与传奇</div></div>
+              <div class="c-foot">乔治·威尔顿 著</div>
+            </div>
+          </div>
+          <div class="s-body">
+            <span class="s-tag">本周新上架</span>
+            <h3>指纹：历史、法则与传奇</h3>
+            <div class="s-author">乔治·威尔顿 著 · 刑事科学技术专业</div>
+            <p>从指纹学的起源讲起，系统梳理指纹识别的科学法则与经典案例，配套高清图谱与交互式比对练习，是刑事科学技术专业的理想入门教材。</p>
+            <a class="s-link" href="#">立即阅读
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="slide sl-2">
+          <div class="s-cover">
+            <div class="cover cv-7">
+              <div><div class="c-sub">数字教材 · 通识课</div><div class="c-title">在书籍里<br>阅无止境</div></div>
+              <div class="c-foot">职教云链 · 数字出版</div>
+            </div>
+          </div>
+          <div class="s-body">
+            <span class="s-tag">编辑推荐</span>
+            <h3>在书籍里，阅无止境</h3>
+            <div class="s-author">通识阅读系列 · 全民阅读推广</div>
+            <p>精选人文社科经典篇目，融合有声领读与批注共读功能，让深度阅读成为日常习惯，助力校园书香文化建设。</p>
+            <a class="s-link" href="#">立即阅读
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="slide sl-3">
+          <div class="s-cover">
+            <div class="cover cv-6">
+              <div><div class="c-sub">数字教材 · 公共基础课</div><div class="c-title">数字法治：<br>理论前沿与实践</div></div>
+              <div class="c-foot">职教云链 · 数字出版</div>
+            </div>
+          </div>
+          <div class="s-body">
+            <span class="s-tag">院校共建</span>
+            <h3>数字法治：理论前沿与实践进阶</h3>
+            <div class="s-author">法律事务专业 · 高职专科</div>
+            <p>聚焦数字时代的法治议题，结合真实判例与情景演练模块，支持课堂授课模式与自主学习模式一键切换。</p>
+            <a class="s-link" href="#">立即阅读
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <button class="carousel-arrow prev" aria-label="上一张">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg>
+        </button>
+        <button class="carousel-arrow next" aria-label="下一张">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+        <div class="carousel-nav">
+          <span class="carousel-dot active"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+        </div>
+      </div>
+
+      <!-- 名师课堂 -->
+      <aside class="panel">
+        <div class="panel-head">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+            名师课堂
+          </h3>
+          <a class="sec-more" href="#">更多
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="panel-list">
+          <div class="panel-item">
+            <div class="p-cover"><div class="cover cv-3"><div class="c-title">AI万金油</div></div></div>
+            <div class="p-body">
+              <div class="p-title">AI万金油：商业幻想与科技狂潮</div>
+              <div class="p-meta"><span class="p-badge">视频课</span>乔治·威尔顿 · 24 讲</div>
+            </div>
+            <span class="p-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg></span>
+          </div>
+          <div class="panel-item">
+            <div class="p-cover"><div class="cover cv-8"><div class="c-title">催眠破案</div></div></div>
+            <div class="p-body">
+              <div class="p-title">催眠破案实录</div>
+              <div class="p-meta"><span class="p-badge">视频课</span>侯森林 · 18 讲</div>
+            </div>
+            <span class="p-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg></span>
+          </div>
+          <div class="panel-item">
+            <div class="p-cover"><div class="cover cv-6"><div class="c-title">法医损伤学</div></div></div>
+            <div class="p-body">
+              <div class="p-title">法医损伤学（第2版）</div>
+              <div class="p-meta"><span class="p-badge">视频课</span>闵建雄 · 32 讲</div>
+            </div>
+            <span class="p-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg></span>
+          </div>
+          <div class="panel-item">
+            <div class="p-cover"><div class="cover cv-9"><div class="c-title">浪潮之巅</div></div></div>
+            <div class="p-body">
+              <div class="p-title">浪潮之巅（第四版 · 全二册）</div>
+              <div class="p-meta"><span class="p-badge">视频课</span>周用武 · 40 讲</div>
+            </div>
+            <span class="p-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg></span>
+          </div>
+          <div class="panel-item">
+            <div class="p-cover"><div class="cover cv-2"><div class="c-title">Excel数据</div></div></div>
+            <div class="p-body">
+              <div class="p-title">Excel 数据管理与数据透视</div>
+              <div class="p-meta"><span class="p-badge">视频课</span>张晓莉 · 26 讲</div>
+            </div>
+            <span class="p-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg></span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 精品教材 ================= -->
+<section class="block">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <h2>精品教材</h2>
+        <span class="en">Featured Textbooks</span>
+      </div>
+      <a class="sec-more" href="reader.html#mall">查看全部
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="book-grid reveal">
+      <a class="book-card" href="#">
+        <div class="b-cover"><div class="cover cv-1"><div><div class="c-sub">管理类</div><div class="c-title">智能组织</div></div><div class="c-foot">职教云链</div></div></div>
+        <div class="b-body">
+          <div class="b-title">智能组织：数据与AI重塑的组织管理</div>
+          <div class="b-author">侯森林 · 周用武 · 徐照宇</div>
+          <div class="b-foot">
+            <span class="price"><span class="yen">¥</span>59.90</span>
+          </div>
+        </div>
+      </a>
+      <a class="book-card" href="#">
+        <div class="b-cover"><div class="cover cv-2"><div><div class="c-sub">数据分析</div><div class="c-title">Excel数据管理与透视</div></div><div class="c-foot">职教云链</div></div></div>
+        <div class="b-body">
+          <div class="b-title">Excel数据管理与数据透视</div>
+          <div class="b-author">张晓莉 · 薛伟强</div>
+          <div class="b-foot">
+            <span class="price"><span class="yen">¥</span>49.90</span>
+          </div>
+        </div>
+      </a>
+      <a class="book-card" href="#">
+        <div class="b-cover"><div class="cover cv-6"><div><div class="c-sub">经管类</div><div class="c-title">ESG评价体系详解</div></div><div class="c-foot">职教云链</div></div></div>
+        <div class="b-body">
+          <div class="b-title">ESG评价体系讲解</div>
+          <div class="b-author">侯森林 · 周用武 · 徐照宇</div>
+          <div class="b-foot">
+            <span class="price"><span class="yen">¥</span>39.90</span>
+          </div>
+        </div>
+      </a>
+      <a class="book-card" href="#">
+        <div class="b-cover"><div class="cover cv-3"><div><div class="c-sub">人工智能</div><div class="c-title">学会提问驾驭AI</div></div><div class="c-foot">职教云链</div></div></div>
+        <div class="b-body">
+          <div class="b-title">学会提问，驾驭AI：提示词从入门到精通</div>
+          <div class="b-author">贺敏华</div>
+          <div class="b-foot">
+            <span class="price"><span class="yen">¥</span>45.00</span>
+          </div>
+        </div>
+      </a>
+      <a class="book-card" href="#">
+        <div class="b-cover"><div class="cover cv-4"><div><div class="c-sub">科技人文</div><div class="c-title">思想的天际线</div></div><div class="c-foot">职教云链</div></div></div>
+        <div class="b-body">
+          <div class="b-title">思想的天际线：科技、经济拓界之美</div>
+          <div class="b-author">侯森林 · 徐照宇</div>
+          <div class="b-foot">
+            <span class="price"><span class="yen">¥</span>52.00</span>
+          </div>
+        </div>
+      </a>
+      <a class="book-card" href="#">
+        <div class="b-cover"><div class="cover cv-12"><div><div class="c-sub">创新创业</div><div class="c-title">全球风口</div></div><div class="c-foot">职教云链</div></div></div>
+        <div class="b-body">
+          <div class="b-title">全球风口：积木式创新与中国新机遇</div>
+          <div class="b-author">侯森林</div>
+          <div class="b-foot">
+            <span class="price"><span class="yen">¥</span>48.00</span>
+          </div>
+        </div>
+      </a>
+      <a class="book-card" href="#">
+        <div class="b-cover"><div class="cover cv-11"><div><div class="c-sub">人工智能</div><div class="c-title">AI万金油</div></div><div class="c-foot">职教云链</div></div></div>
+        <div class="b-body">
+          <div class="b-title">AI万金油：商业幻想与科技狂潮</div>
+          <div class="b-author">乔治·威尔顿</div>
+          <div class="b-foot">
+            <span class="price"><span class="yen">¥</span>56.00</span>
+          </div>
+        </div>
+      </a>
+      <a class="book-card" href="#">
+        <div class="b-cover"><div class="cover cv-9"><div><div class="c-sub">科技史</div><div class="c-title">浪潮之巅</div></div><div class="c-foot">职教云链</div></div></div>
+        <div class="b-body">
+          <div class="b-title">浪潮之巅（第四版 · 全二册）</div>
+          <div class="b-author">周用武 · 徐照宇</div>
+          <div class="b-foot">
+            <span class="price"><span class="yen">¥</span>88.00</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 友情链接 ================= -->
+<section class="block">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <h2>友情链接</h2>
+        <span class="en">Partners</span>
+      </div>
+    </div>
+    <div class="links-strip reveal">
+      <a class="link-chip" href="http://www.moe.gov.cn/" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>中华人民共和国教育部</a>
+      <a class="link-chip" href="https://www.cnpub.com.cn/" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>国家版本数据中心</a>
+      <a class="link-chip" href="https://edu.gd.gov.cn/" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>广东省教育厅</a>
+      <a class="link-chip" href="https://zfsg.gd.gov.cn/" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>广东省政务服务和数据管理局</a>
+      <a class="link-chip" href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>广东省职业教育教材研发中心</a>
+      <a class="link-chip" href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>广东省职业教育融媒体和数字化教材管理平台</a>
+      <a class="link-chip" href="https://www.chinazy.org/" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>中国职业技术教育网</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <a class="logo on-dark" href="index.html">
+        <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+          <path d="M8 26c-3.3 0-6-2.7-6-6s2.7-6 6-6c.5-4.5 4.3-8 9-8 3.8 0 7 2.3 8.4 5.6" stroke="#00C29A" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M32 14c3.3 0 6 2.7 6 6s-2.7 6-6 6c-.5 4.5-4.3 8-9 8-3.8 0-7-2.3-8.4-5.6" stroke="#5B8DF7" stroke-width="3.4" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="3.2" fill="#fff"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-cn">职教云链</span>
+          <span class="logo-en">Zhijiao Yunlian</span>
+        </span>
+      </a>
+      <p>面向职教、服务职教、引领职教。连接作者、出版社与院校，构建职业教育数字教材新生态。</p>
+    </div>
+    <div>
+      <h4>平台服务</h4>
+      <ul>
+        <li><a href="reader.html">数字教材</a></li>
+        <li><a href="#">终身教育</a></li>
+        <li><a href="#">名师课堂</a></li>
+        <li><a href="#">我要写书</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>合作入驻</h4>
+      <ul>
+        <li><a href="#">作者入驻</a></li>
+        <li><a href="#">出版社合作</a></li>
+        <li><a href="#">院校合作</a></li>
+        <li><a href="#">内容审核规范</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>帮助中心</h4>
+      <ul>
+        <li><a href="#">新手指引</a></li>
+        <li><a href="#">购买与支付</a></li>
+        <li><a href="#">常见问题</a></li>
+        <li><a href="#">联系我们</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <span>© 2026 职教云链 · 保留所有权利</span>
+    <span>粤ICP备XXXXXXXX号 · 粤公网安备XXXXXXXXXXXX号</span>
+  </div>
+</footer>
+
+<script src="assets/app.js?v=20260711h"></script>
+</body>
+</html>
