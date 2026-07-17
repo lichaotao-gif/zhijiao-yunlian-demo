@@ -245,10 +245,10 @@ function renderMy() {
               <div class="track"><div class="fill" style="width:${pr}%;"></div></div>
             </div>
             <div class="rd-my-actions">
-              <span class="btn-mini" onclick="event.stopPropagation();openReader(${m.i})">继续阅读
+              <button class="btn-mini" type="button" onclick="event.stopPropagation();openReader(${m.i})">继续阅读
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </span>
-              <span class="btn-mini ghost" onclick="event.stopPropagation();openTeach(${m.i})">授课模式</span>
+              </button>
+              <button class="btn-mini ghost" type="button" onclick="event.stopPropagation();openTeach(${m.i})">授课模式</button>
             </div>
           </div>
         </article>`;
