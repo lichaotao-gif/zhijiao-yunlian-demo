@@ -38,11 +38,7 @@ document.querySelectorAll('.cat-card[href="#"]').forEach(card => {
     </button>
     <div class="m-head">
       <span class="m-logo">
-        <svg width="44" height="44" viewBox="0 0 40 40" fill="none">
-          <path d="M8 26c-3.3 0-6-2.7-6-6s2.7-6 6-6c.5-4.5 4.3-8 9-8 3.8 0 7 2.3 8.4 5.6" stroke="#00C29A" stroke-width="3.4" stroke-linecap="round"/>
-          <path d="M32 14c3.3 0 6 2.7 6 6s-2.7 6-6 6c-.5 4.5-4.3 8-9 8-3.8 0-7-2.3-8.4-5.6" stroke="#2160F3" stroke-width="3.4" stroke-linecap="round"/>
-          <circle cx="20" cy="20" r="3.2" fill="#0D1B3E"/>
-        </svg>
+        <img class="brand-mark brand-mark-modal" src="assets/logo-mark.svg" alt="">
       </span>
       <h2>欢迎登录职教云链</h2>
       <div class="m-underline"></div>
@@ -83,23 +79,36 @@ document.querySelectorAll('.cat-card[href="#"]').forEach(card => {
   </div>`;
   document.body.appendChild(mask);
 
+  let pendingRedirect = new URLSearchParams(location.search).get('redirect');
   function open() { mask.classList.add('open'); document.body.style.overflow = 'hidden'; setTimeout(() => mask.querySelector('input').focus(), 250); }
   function close() { mask.classList.remove('open'); document.body.style.overflow = ''; }
 
   document.querySelectorAll('a[href="login.html"]').forEach(a => {
     a.addEventListener('click', e => { e.preventDefault(); open(); });
   });
+  document.querySelectorAll('[data-auth-link]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const destination = a.dataset.authLink;
+      pendingRedirect = destination;
+      open();
+    });
+  });
   mask.querySelector('.modal-close').addEventListener('click', close);
   mask.addEventListener('click', e => { if (e.target === mask) close(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-  if (location.hash === '#login') open();
+  if (location.hash === '#login' || pendingRedirect) open();
 
   mask.querySelector('form').addEventListener('submit', e => {
     e.preventDefault();
     const btn = mask.querySelector('.btn-login');
     btn.textContent = '登录中…';
     btn.style.letterSpacing = '2px';
-    setTimeout(() => { btn.textContent = '登 录'; btn.style.letterSpacing = ''; close(); }, 900);
+    setTimeout(() => {
+      btn.textContent = '登 录'; btn.style.letterSpacing = ''; close();
+      localStorage.setItem('zjyl_logged_in', '1');
+      if (pendingRedirect) { const destination = pendingRedirect; pendingRedirect = null; location.href = destination; }
+    }, 900);
   });
 })();
 
@@ -194,4 +203,3 @@ document.querySelectorAll('.toggle-pass').forEach(btn => {
   }, { threshold: 0.08 });
   els.forEach(el => io.observe(el));
 })();
-

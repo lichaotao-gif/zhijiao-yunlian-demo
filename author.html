@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>作者端 — 职教云链</title>
+<link rel="stylesheet" href="assets/style.css?v=20260716a">
+<link rel="stylesheet" href="assets/workbench.css?v=20260716a">
+<script>if (localStorage.getItem('zjyl_logged_in') !== '1') location.replace('index.html?redirect=author.html#login');</script>
+</head>
+<body>
+<div class="wb-app wb-author" data-role="author">
+  <aside class="wb-side">
+    <a class="logo" href="index.html"><img class="brand-mark brand-mark-reader" src="assets/logo-mark.svg" alt=""><span class="logo-text"><span class="logo-cn">职教云链</span><span class="logo-en">Zhijiao Yunlian</span></span></a>
+    <div class="wb-role"><span class="wb-role-dot">创</span><div><b>作者工作台</b><small>Creator Studio</small></div></div>
+    <nav class="wb-nav" aria-label="作者端导航">
+      <button class="active" data-panel="home"><i>⌂</i>工作台</button>
+      <button data-panel="books"><i>▤</i>我的教材</button>
+      <button data-panel="data"><i>↗</i>数据中心</button>
+    </nav>
+    <div class="wb-side-bottom"><a href="reader.html">← 返回数字教材</a><a href="index.html">返回门户首页</a></div>
+  </aside>
+  <main class="wb-main">
+    <header class="wb-top"><div><span class="wb-crumb">作者端 / <b id="wbCrumb">工作台</b></span><h1 id="wbTitle">上午好，李老师</h1></div><div class="wb-top-actions"><button class="wb-icon-btn" data-toast="消息中心暂未开启">♧<em>3</em></button><button class="wb-user" data-toast="个人设置功能开发中"><span>李</span><b>李明远<small>认证作者</small></b><i>⌄</i></button></div></header>
+    <div class="wb-scroll">
+      <section class="wb-panel active" id="panel-home">
+        <div class="wb-hero"><div><span class="wb-kicker">创作进行时</span><h2>把专业经验，变成<br>每一位学生读得懂的教材</h2><p>你的教材已覆盖 18 所院校、3,248 位学习者。</p><button class="wb-primary" data-action="create">＋ 新建教材</button></div><div class="wb-hero-stat"><b>86<span>%</span></b><small>本月内容完成度</small><div><i></i><i></i><i></i><i></i><i class="off"></i></div></div></div>
+        <div class="wb-section-head"><div><h2>创作概览</h2><p>本月教材与内容资产动态</p></div><button class="wb-text-btn" data-panel-jump="data">查看数据 →</button></div>
+        <div class="wb-metrics"><article><span class="mint">▤</span><div><b>06</b><p>在编教材</p></div><small class="up">↑ 2 本</small></article><article><span class="blue">≡</span><div><b>42</b><p>已完成章节</p></div><small class="up">↑ 6 章</small></article><article><span class="gold">◎</span><div><b>3,248</b><p>学习人数</p></div><small class="up">↑ 12.6%</small></article><article><span class="purple">✦</span><div><b>96%</b><p>审核通过率</p></div><small>近 90 天</small></article></div>
+        <div class="wb-grid-two"><section class="wb-card"><header><div><h3>继续创作</h3><p>最近编辑的教材</p></div><button class="wb-text-btn" data-panel-jump="books">全部教材</button></header><div class="wb-book-row"><div class="wb-cover c1"><span>人工智能<br>应用基础</span></div><div><b>人工智能应用基础（第2版）</b><p>第 5 章 · 智能算法实践</p><div class="wb-progress"><i style="width:72%"></i></div><small>72% · 2 小时前编辑</small></div><a class="wb-outline" href="write.html">继续编辑</a></div><div class="wb-book-row"><div class="wb-cover c2"><span>新媒体<br>运营实务</span></div><div><b>新媒体运营实务</b><p>封面与目录待完善</p><div class="wb-progress"><i style="width:38%"></i></div><small>38% · 昨天编辑</small></div><a class="wb-outline" href="write.html">继续编辑</a></div></section>
+          <section class="wb-card"><header><div><h3>待办事项</h3><p>需要你处理的工作</p></div><span class="wb-count">4</span></header><ul class="wb-tasks"><li><span class="task-red"></span><div><b>《人工智能应用基础》待提交审核</b><p>完成编写后可提交出版社审校</p></div><button data-toast="教材已标记为待提交">处理</button></li><li><span class="task-gold"></span><div><b>3 条读者批注需要回复</b><p>来自广东轻工职业技术大学</p></div><button data-toast="已进入批注列表">查看</button></li><li><span class="task-blue"></span><div><b>补充第 4 章的实训视频</b><p>建议时长 6–12 分钟</p></div><button data-toast="已打开资源上传">上传</button></li></ul></section></div>
+      </section>
+      <section class="wb-panel" id="panel-books"><div class="wb-section-head"><div><h2>我的教材</h2><p>管理教材的创作、审核和发布状态</p></div><button class="wb-primary" data-action="create">＋ 新建教材</button></div><div class="wb-tabs"><button class="active">全部 06</button><button>草稿 02</button><button>审核中 01</button><button>已发布 03</button></div><div class="wb-book-grid"><article><div class="wb-cover large c1"><span>人工智能<br>应用基础</span><em>在编</em></div><div class="wb-book-info"><h3>人工智能应用基础（第2版）</h3><p>高职专科 · 专业基础课</p><div class="wb-progress"><i style="width:72%"></i></div><small>内容完成度 72%</small><footer><a class="wb-outline" href="write.html">编辑教材</a><button class="wb-plain" data-toast="更多操作">•••</button></footer></div></article><article><div class="wb-cover large c2"><span>新媒体<br>运营实务</span><em>草稿</em></div><div class="wb-book-info"><h3>新媒体运营实务</h3><p>高职专科 · 专业核心课</p><div class="wb-progress"><i style="width:38%"></i></div><small>内容完成度 38%</small><footer><a class="wb-outline" href="write.html">编辑教材</a><button class="wb-plain" data-toast="更多操作">•••</button></footer></div></article><article><div class="wb-cover large c3"><span>数字化<br>制造技术</span><em class="ok">已发布</em></div><div class="wb-book-info"><h3>数字化制造技术</h3><p>中职 · 专业核心课</p><div class="wb-progress"><i style="width:100%"></i></div><small>2026-06-24 发布</small><footer><button class="wb-outline" data-toast="已打开教材详情">查看教材</button><button class="wb-plain" data-toast="更多操作">•••</button></footer></div></article></div></section>
+      <section class="wb-panel" id="panel-data"><div class="wb-section-head"><div><h2>数据中心</h2><p>近 30 天的教材使用情况</p></div><button class="wb-select">近 30 天⌄</button></div><div class="wb-data-grid"><section class="wb-card wb-chart"><header><div><h3>学习人数趋势</h3><p>累计学习人数 3,248</p></div><b class="up">+12.6%</b></header><div class="chart-bars"><i style="height:28%"></i><i style="height:46%"></i><i style="height:40%"></i><i style="height:62%"></i><i style="height:56%"></i><i style="height:82%"></i><i style="height:72%"></i><i style="height:100%"></i></div><div class="chart-axis"><span>06/17</span><span>06/24</span><span>07/01</span><span>07/08</span></div></section><section class="wb-card wb-ranking"><header><div><h3>教材热度排行</h3><p>按本月阅读量排序</p></div></header><ol><li><b>01</b><span>人工智能应用基础（第2版）<small>1,286 人学习</small></span><em>86%</em></li><li><b>02</b><span>数字化制造技术<small>934 人学习</small></span><em>73%</em></li><li><b>03</b><span>新媒体运营实务<small>618 人学习</small></span><em>58%</em></li></ol></section></div></section>
+    </div>
+  </main>
+</div>
+<div class="wb-modal" id="wbModal"><div><button class="wb-close">×</button><span class="wb-kicker">新建教材</span><h2>从一个好选题开始</h2><p>填写教材名称后，即可进入可视化编写工作台。</p><label>教材名称<input placeholder="例如：人工智能应用基础"></label><label>适用层次<select><option>高职专科</option><option>中职</option><option>本科</option></select></label><button class="wb-primary wb-modal-submit">创建并开始编写</button></div></div>
+<script src="assets/app.js?v=20260716a"></script><script src="assets/workbench.js?v=20260716a"></script>
+</body></html>
