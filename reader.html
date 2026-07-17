@@ -134,8 +134,15 @@ let fLevel='全部', fCat='全部', curView='mall';
 
 /* ================= 工具 ================= */
 const esc = s => String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const COVER_ART = {
+  '法医损伤学（第2版）': 'art-forensic',
+  'Excel数据管理与数据透视': 'art-excel',
+  '学会提问，驾驭AI：提示词从入门到精通': 'art-ai',
+  '智能组织：数据与AI重塑的组织管理': 'art-ai'
+};
 function coverHtml(b) {
-  return `<div class="cover ${b.cv}${b.light?' light':''}">
+  const art = COVER_ART[b.t] || '';
+  return `<div class="cover ${b.cv}${b.light?' light':''}${art ? ` cover-art ${art}` : ''}">
     <div><div class="c-sub" style="font-size:8px;">${esc(b.sub)}</div><div class="c-title" style="font-size:13px;">${esc(b.t.length>12?b.t.slice(0,12)+'…':b.t)}</div></div>
     <div class="c-foot" style="font-size:7px;">职教云链 · 数字出版</div>
   </div>`;

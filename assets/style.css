@@ -274,6 +274,12 @@ section.block:last-of-type { padding-bottom: 72px; }
 .cover.light { color: var(--ink); }
 .cover.light::before { background: rgba(13,27,62,.14); }
 .cover.light .c-foot { border-top-color: rgba(13,27,62,.2); }
+.cover.cover-art { background-position: center; background-size: cover; }
+.cover.cover-art::after { background: linear-gradient(180deg, rgba(5,17,47,.12), rgba(5,17,47,.08) 45%, rgba(5,17,47,.45)); }
+.cover.cover-art .c-title, .cover.cover-art .c-sub, .cover.cover-art .c-foot { text-shadow: 0 1px 3px rgba(0,0,0,.42); }
+.cover.art-ai { background-image: linear-gradient(180deg, rgba(4,24,78,.08), rgba(4,24,78,.3)), url('covers/ai-foundations.png'); }
+.cover.art-excel { background-image: linear-gradient(180deg, rgba(5,62,50,.08), rgba(5,39,56,.3)), url('covers/excel-data.png'); }
+.cover.art-forensic { background-image: linear-gradient(180deg, rgba(3,18,56,.08), rgba(3,18,56,.3)), url('covers/forensic-injury.png'); }
 
 .cv-1 { background: linear-gradient(160deg, #12369C, #2160F3 65%, #10C7B0 140%); }
 .cv-2 { background: linear-gradient(160deg, #0A6B5D, #00A886 70%, #7FE0C4 145%); }
