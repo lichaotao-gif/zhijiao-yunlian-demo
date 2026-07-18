@@ -46,7 +46,7 @@ img { max-width: 100%; display: block; }
 ::selection { background: rgba(33,96,243,.18); }
 
 /* ---------- Logo ---------- */
-.logo { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; }
+.logo { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; flex: 0 0 auto; white-space: nowrap; }
 .logo svg, .logo .brand-mark { flex: 0 0 auto; }
 .brand-mark { width: 40px; height: 40px; object-fit: contain; }
 .brand-mark-sm { width: 36px; height: 36px; }
@@ -71,6 +71,7 @@ img { max-width: 100%; display: block; }
 .main-nav a {
   padding: 8px 16px; border-radius: 8px; font-size: 15px; font-weight: 500;
   color: var(--ink-2); transition: all .2s var(--ease); position: relative;
+  white-space: nowrap;
 }
 .main-nav a:hover { color: var(--blue); background: var(--blue-soft); }
 .main-nav a.active { color: var(--blue); font-weight: 700; }
@@ -644,6 +645,15 @@ section.block:last-of-type { padding-bottom: 72px; }
   .login-page { grid-template-columns: 1fr; }
   .login-brand { display: none; }
 }
+@media (max-width: 1150px) {
+  .header-inner { gap: 18px; }
+  .main-nav { gap: 0; }
+  .main-nav a { padding: 8px 10px; font-size: 14px; }
+  .main-nav a.active::after { left: 10px; right: 10px; }
+  .logo-en { display: none; }
+  .search-box { width: 150px; }
+  .search-box:focus-within { width: 190px; }
+}
 @media (max-width: 720px) {
   .container { padding: 0 20px; }
   .main-nav { display: none; }
@@ -827,7 +837,7 @@ section.block:last-of-type { padding-bottom: 72px; }
   background: rgba(255,255,255,.18); backdrop-filter: blur(6px); transition: background .2s;
 }
 .bd-close:hover { background: rgba(255,255,255,.35); }
-.bd-hero { position: relative; padding: 36px 32px 28px; color: #fff; display: flex; gap: 22px; align-items: flex-end; }
+.bd-hero { position: relative; padding: 36px 32px 28px; color: #fff; display: flex; gap: 22px; align-items: center; justify-content: center; }
 .bd-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse at 85% 0%, rgba(255,255,255,.18), transparent 55%); }
 .bd-hero .cover { width: 128px; flex: 0 0 auto; padding: 14px 12px; box-shadow: 0 16px 40px rgba(0,0,0,.35); position: relative; }
 .bd-hero-body { position: relative; min-width: 0; }
